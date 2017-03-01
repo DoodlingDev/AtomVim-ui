@@ -1,0 +1,54 @@
+
+// Status Bar
+// -------------------
+
+// Located at the bottom.
+// Displays information about the current editor.
+// Overrides: atom/status-bar
+
+.footer {
+  height: @cursor-height;
+}
+
+.status-bar {
+  font-size: @font-size;
+  line-height: @cursor-height;
+  color: @text-color;
+  background-color: @base-border-color;
+
+
+}
+
+.status-bar-left {
+  linter-bottom-tab {
+    .borderless;
+    .horiz-padding;
+    vertical-align: initial;
+    line-height: @cursor-height;
+    margin: 0;
+
+    * {
+      margin: 0;
+    }
+  }
+
+  linter-bottom-status {
+    .borderless;
+    .horiz-padding;
+    margin: 0;
+    line-height: @cursor-height;
+  }
+
+  .icon-x::before {
+    padding: 0;
+    font-family: @font-family;
+    line-height: @cursor-height;
+    font-size: 14px;
+    margin: 0;
+    top: initial;
+    content: "x";
+    background-color: @background-color-error;
+    color: @black;
+    height: @cursor-height;
+  }
+}

@@ -1,0 +1,71 @@
+atom-panel-container.bottom {
+  padding: 0;
+}
+
+.panel-bottom {
+  padding: 0;
+
+  .project-find,
+  .find-and-replace {
+    padding: 0;
+  }
+
+  * {
+    border: 0;
+  }
+
+  header.header {
+    background-color: @light-grey;
+    color: @text-color-highlight;
+    margin: 0 !important;
+    padding: 0 @cursor-width !important;
+    line-height: @cursor-height !important;
+    height: @cursor-height !important;
+    font-size: @font-size !important;
+
+    .header-item {
+      .horiz-padding;
+      display: inline-block;
+      margin: 0;
+
+      span {
+        .horiz-padding;
+        vertical-align: bottom;
+        display: inline-block;
+        margin: 0;
+        height: @cursor-height;
+        line-height: @cursor-height;
+      }
+    }
+
+    .subtle-info-message {
+      .horiz-padding;
+      display: inline-block;
+      line-height: @cursor-height !important;
+      height: @cursor-height !important;
+      font-size: @font-size !important;
+    }
+
+    span {
+      display: inline-block;
+      height: @cursor-height;
+    }
+  }
+
+  .input-block-item {
+    padding: 0;
+
+    .syntax--text {
+      color: @text-color-selected;
+    }
+  }
+
+  .find-meta-container {
+    .horiz-padding;
+    top: 0;
+    margin: 0;
+    height: @cursor-height;
+    font-size: @font-size;
+    background-color: @grey;
+  }
+}

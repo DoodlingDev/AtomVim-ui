@@ -1,0 +1,108 @@
+.__icon {
+  top: 0 !important;
+  width: @cursor-width * 2;
+  height: @cursor-height;
+  font-size: 12px;
+  font-family: @font-family;
+  line-height: @cursor-height;
+  text-align: right;
+}
+
+[class*="-icon"]::before {
+  .__icon;
+}
+
+.css3-icon::before {
+  background-color: #3060A2;
+  color: @white;
+  content: "c3";
+}
+
+.npm-icon::before {
+  background-color: #AC4142;
+  color: @black;
+  content: "nd";
+}
+
+.book-icon::before {
+  background-color: #6A9EB4;
+  color: @black;
+  content: "re";
+}
+
+.markdown-icon::before {
+  background-color: #6A9EB4;
+  color: @black;
+  content: "Md";
+}
+
+.icon-file-directory::before {
+  .__icon;
+  background-color: #F9E2A4;
+  content: "+";
+  color: @black;
+}
+
+.icon-search::before {
+  .__icon;
+  background-color: @highlight-grey;
+  content: " s";
+  color: @black;
+}
+
+.close-icon::before {
+  .__icon;
+  background-color: transparent;
+  content: "x"
+}
+
+.icon-diff-ignored::before {
+  .__icon;
+  width: @cursor-width;
+  background-color: #888;
+  color: @black;
+  content: "/";
+  font-weight: bold;
+}
+
+.icon-diff-added::before {
+  .__icon;
+  width: @cursor-width;
+  background-color: #6CC990;
+  color: @black;
+  content: "+";
+  font-weight: bold;
+}
+
+.icon-diff-modified::before {
+  .__icon;
+  width: @cursor-width;
+  background-color: #E2C08D;
+  color: @black;
+  content: "*";
+  font-weight: bold;
+}
+
+.icon-diff-removed::before {
+  .__icon;
+  width: @cursor-width;
+  background-color: #FE6347;
+  color: @black;
+  content: "-";
+  font-weight: bold;
+}
+
+.icon-diff-renamed::before {
+  .__icon;
+  width: @cursor-width;
+  background-color: #6494ED;
+  color: @black;
+  content: ">";
+  font-weight: bold;
+}
+
+.badge {
+  .__icon;
+  border-radius: 0;
+  width: auto;
+}

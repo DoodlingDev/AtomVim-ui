@@ -1,0 +1,114 @@
+
+// Panels
+// -------------------
+
+// Overrides: atom/static/panels.less
+
+.panel-heading {
+  background-color: @panel-heading-background-color;
+}
+
+.inset-panel {
+  background-color: @inset-panel-background-color;
+  .panel-heading {
+    background-color: lighten(@inset-panel-background-color, 4%);
+  }
+}
+
+
+// Modal -------------------
+// Used on top of the editor, like the Command Palette.
+
+atom-panel.modal {
+  .soft-box-shadow;
+  .cursor-border;
+
+  li {
+    height: @cursor-height;
+    line-height: @cursor-height;
+    padding: 0;
+    .horiz-padding;
+  }
+}
+
+.modal.overlay.from-top {
+  top: 10%;
+  .cursor-border;
+
+  .list-group {
+    margin: 0;
+
+    ol {
+      margin: 0;
+    }
+
+    li {
+      padding: 0 @cursor-width;
+    }
+  }
+
+  atom-text-editor {
+    margin: 0;
+  }
+
+  .info-message {
+    margin: 0;
+  }
+}
+
+.panel-title {
+  position: absolute;
+  top: -@cursor-height;
+  line-height: @cursor-height;
+  color: @black;
+}
+
+.command-palette::before {
+  .panel-title;
+  content: "Command Palette";
+}
+
+.advanced-open-file::before {
+  .panel-title;
+  content: "Advanced Open File";
+}
+
+.panel-heading {
+  border: 0;
+}
+
+.list-tree {
+
+  .list-item {
+
+  }
+
+  .list-item::before {
+    margin: 0;
+  }
+
+  .list-nested-item {
+    padding-left: 8px;
+
+    & > .list-item {
+      margin-left: 0;
+    }
+  }
+
+  &.has-collapsable-children {
+
+    .list-item {
+      // margin-left: 8px;
+    }
+  }
+}
+
+.list-tree.has-collapsable-children .list-nested-item > .list-tree > li, .list-tree.has-collapsable-children .list-nested-item > .list-group > li {
+  padding-left: 8px;
+}
+
+.header.list-item::before {
+  width: @cursor-width;
+  height: @cursor-height;
+  line-height: @cursor-height;
+}

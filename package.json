@@ -1,0 +1,15 @@
+{
+  "name": "avim-ui",
+  "theme": "ui",
+  "version": "0.0.0",
+  "description": "Making Atom as close to the metal as your terminal",
+  "keywords": [
+    "ui",
+    "theme"
+  ],
+  "repository": "",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}

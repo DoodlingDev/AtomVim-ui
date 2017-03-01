@@ -1,0 +1,88 @@
+
+// Lists
+// -------------------
+
+// Used in different places, like the Tree View, Commmand Palette etc.
+// Overrides: atom/static/lists.less
+
+// List Group -------------------
+.list-group {
+  margin: 0;
+
+  li {
+    .horiz-padding;
+
+    // We want to highlight the background of the list items because we dont know their size.
+    &.selected {
+      color: @text-color-selected;
+      background-color: @background-color-selected;
+      &:before{ display: none; }
+    }
+  }
+}
+
+
+// List Tree -------------------
+.list-tree {
+  .selected {
+    color: @text-color-selected;
+  }
+}
+
+
+// Select List -------------------
+.select-list {
+  ol.list-group,
+  ul.list-group {
+    margin: 0;
+  }
+
+  li {
+    padding: @component-padding/2 @component-padding;
+  }
+  .status {
+    float: right;
+  }
+}
+
+
+// Popover List -------------------
+// Used as a popover for something like autocomplete.
+.select-list.popover-list {
+  padding: 0;
+
+  border-radius: @component-border-radius;
+  background-color: @overlay-background-color;
+  box-shadow: 0 2px 8px 1px hsla(0,0%,0%,.3);
+
+  .list-group {
+    li {
+      .only-horiz-padding;
+    }
+  }
+}
+
+.two-lines {
+  height: @cursor-height * 2 !important;
+
+  .secondary-line {
+    padding-left: @cursor-width;
+  }
+}
+
+atom-text-editor.editor.mini {
+  margin: 0 !important;
+  height: @cursor-height !important;
+  line-height: @cursor-height !important;
+}
+
+.error-message {
+  .horiz-padding;
+  height: @cursor-height !important;
+  line-height: @cursor-height !important;
+}
+
+.list-item {
+  height: @cursor-height;
+  line-height: @cursor-height;
+}

@@ -1,0 +1,47 @@
+
+// Mini Editor
+// -------------------
+
+// Mini Editors are the "text inputs" used in find+replace or in the settings.
+::-webkit-scrollbar {
+    display: none;
+}
+
+atom-text-editor[mini] {
+  font-size: @font-size;
+  padding-left: @component-padding/2;
+  color: @text-color;
+  border-radius: @component-border-radius;
+  background-color: @input-background-color;
+
+  &.is-focused {
+    background-color: darken(@input-background-color, 5%);
+  }
+
+  &, // <-- Deprecated. The `&,` can be removed once the Shadow DOM can't be turned off in the settings.
+  &::shadow {
+    .placeholder-text {
+      color: @text-color-subtle;
+    }
+    .selection .region {
+      background-color: @background-color-selected;
+    }
+  }
+}
+
+atom-pane {
+  border-right: @cursor-width solid @base-border-color;
+}
+
+.editor .cursor {
+  position: absolute;
+  // background-color: hsla(0, 0%, 50%, 0.5);
+  border-left: 2px solid hsla(0, 0%, 90%, 0.7);
+  // border-right: 3px solid hsla(0, 0%, 0%, 0.3);
+  opacity: 1;
+}
+
+atom-text-editor::shadow .normal-mode .is-focused .cursors .cursor {
+  opacity: 1;
+  background-color: @light-grey;
+}

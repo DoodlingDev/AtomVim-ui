@@ -7,9 +7,13 @@
     display: none;
 }
 
+atom-text-editor {
+  background-color: @base-background-color;
+}
+
 atom-text-editor[mini] {
   font-size: @font-size;
-  padding-left: @component-padding/2;
+  padding-left: @component-padding;
   color: @text-color;
   border-radius: @component-border-radius;
   background-color: @input-background-color;
@@ -44,4 +48,23 @@ atom-pane {
 atom-text-editor::shadow .normal-mode .is-focused .cursors .cursor {
   opacity: 1;
   background-color: @light-grey;
+}
+
+.input-select,
+.input-number {
+  .only-horiz-padding;
+  margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
+  height: @cursor-height;
+  border-radius: 0;
+  border: 1px solid @light-grey;
+}
+
+.block {
+  margin: 0;
+
+  label {
+    margin: 0;
+  }
 }

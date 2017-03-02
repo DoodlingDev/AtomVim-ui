@@ -112,3 +112,38 @@ atom-panel.modal {
   height: @cursor-height;
   line-height: @cursor-height;
 }
+
+linter-panel {
+  line-height: @cursor-height;
+  min-height: @cursor-height;
+  font-size: @font-size;
+  background-color: #333;
+
+  linter-message {
+    display: inline-block;
+    line-height: @cursor-height;
+    min-height: @cursor-height;
+
+    .linter-message-item {
+      .only-horiz-padding;
+      vertical-align: top;
+      margin: 0;
+      height: @cursor-height;
+      line-height: @cursor-height;
+    }
+  }
+
+  .badge,
+  .badge.badge-flexible {
+    height: @cursor-height;
+    line-height: @cursor-height;
+    .only-horiz-padding;
+    margin: 0;
+    font-size: @font-size;
+  }
+}
+
+atom-panel.bottom.tool-panel.panel-bottom {
+  min-height: @cursor-height;
+  line-height: @cursor-height;
+}

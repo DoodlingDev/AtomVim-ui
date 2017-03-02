@@ -13,17 +13,20 @@
 .status-bar {
   font-size: @font-size;
   line-height: @cursor-height;
-  color: @text-color;
+  color: @text-color-highlight;
   background-color: @base-border-color;
 
-
+  .line-ending-tile {
+    color: @text-color-highlight;
+  }
 }
 
 .status-bar-left {
   linter-bottom-tab {
     .borderless;
     .horiz-padding;
-    vertical-align: initial;
+    color: @text-color-highlight;
+    vertical-align: top;
     line-height: @cursor-height;
     margin: 0;
 
@@ -51,4 +54,14 @@
     color: @black;
     height: @cursor-height;
   }
+
+}
+
+.deprecation-number {
+  color: @background-color-warning !important;
+}
+
+.encoding-status a,
+.grammar-status a {
+  color: @text-color-highlight;
 }

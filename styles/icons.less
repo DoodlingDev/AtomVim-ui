@@ -1,108 +1,148 @@
-.__icon {
+.__icon(@content; @bg-color: #666; @color: @black;) {
   top: 0 !important;
   width: @cursor-width * 2;
-  height: @cursor-height;
+  height: @cursor-height !important;
   font-size: 12px;
   font-family: @font-family;
   line-height: @cursor-height;
   text-align: right;
+  content: @content;
+  background-color: @bg-color;
+  color: @color;
 }
-
-[class*="-icon"]::before {
-  .__icon;
-}
+//
+// [class*="-icon"]::before {
+//   .__icon;
+// }
 
 .css3-icon::before {
-  background-color: #3060A2;
-  color: @white;
-  content: "c3";
+  .__icon("c3"; #3060A2; @white);
 }
 
 .npm-icon::before {
-  background-color: #AC4142;
-  color: @black;
-  content: "nd";
+  .__icon("nd"; #AC4142);
 }
 
 .book-icon::before {
-  background-color: #6A9EB4;
-  color: @black;
-  content: "re";
+  .__icon("re"; #6A9EB4);
 }
 
 .markdown-icon::before {
-  background-color: #6A9EB4;
-  color: @black;
-  content: "Md";
+  .__icon("Md"; #6A9EB4);
 }
 
 .icon-file-directory::before {
-  .__icon;
-  background-color: #F9E2A4;
-  content: "+";
-  color: @black;
+  .__icon("+"; #F9E2A4);
 }
 
 .icon-search::before {
-  .__icon;
-  background-color: @highlight-grey;
-  content: " s";
-  color: @black;
+  .__icon(" s"; @highlight-grey);
 }
 
 .close-icon::before {
-  .__icon;
-  background-color: transparent;
-  content: "x"
+  .__icon("x"; transparent);
 }
 
 .icon-diff-ignored::before {
-  .__icon;
-  width: @cursor-width;
-  background-color: #888;
-  color: @black;
-  content: "/";
+  .__icon("/"; #888);
+  width: @cursor-width !important;
   font-weight: bold;
 }
 
 .icon-diff-added::before {
-  .__icon;
-  width: @cursor-width;
-  background-color: #6CC990;
-  color: @black;
-  content: "+";
+  .__icon("+"; #6CC990);
+  width: @cursor-width !important;
   font-weight: bold;
 }
 
 .icon-diff-modified::before {
-  .__icon;
-  width: @cursor-width;
-  background-color: #E2C08D;
-  color: @black;
-  content: "*";
+  .__icon("*"; #E2C08D);
+  width: @cursor-width !important;
   font-weight: bold;
 }
 
 .icon-diff-removed::before {
-  .__icon;
-  width: @cursor-width;
-  background-color: #FE6347;
-  color: @black;
-  content: "-";
+  .__icon("-"; #FE6347);
+  width: @cursor-width !important;
   font-weight: bold;
 }
 
 .icon-diff-renamed::before {
-  .__icon;
-  width: @cursor-width;
-  background-color: #6494ED;
-  color: @black;
-  content: ">";
+  .__icon(">"; #6494ED);
+  width: @cursor-width !important;
   font-weight: bold;
 }
+//
+// .badge {
+//   .__icon;
+//   border-radius: 0;
+//   width: auto;
+//   padding: 0 @cursor-width;
+// }
 
-.badge {
-  .__icon;
-  border-radius: 0;
-  width: auto;
+.git-icon::before {
+  .__icon("gt"; #AC4142);
+}
+
+.icon-alert::before {
+  .__icon("!"; @background-color-warning);
+  height: @cursor-height !important;
+  width: @cursor-width !important;
+}
+
+.icon-package::before {
+  .__icon("p"; @text-color-info);
+  width: @cursor-width !important;
+}
+
+.ruby-icon::before {
+  .__icon("rb"; #AC4142);
+}
+
+.circleci-icon::before {
+  .__icon("ci"; #42C88A);
+}
+
+.sass-icon::before {
+  .__icon("Ss"; #FF4DDB);
+}
+
+.dashboard-icon::before {
+  .__icon("sl"; #C97F44);
+}
+
+.database-icon::before {
+  .__icon("yl"; #C97071);
+}
+
+.icon-tools::before {
+  .__icon("-s"; #CCC);
+  width: @cursor-width * 2 !important;
+}
+
+.icon-repo::before {
+  .__icon("/*"; #444);
+}
+
+.bundler-icon::before {
+  .__icon("bn"; #6090A5; @white);
+}
+.heroku-icon::before {
+  .__icon("hk"; #563F95; @white);
+}
+
+.default-icon::before {
+  .__icon("-"; #666; @white);
+}
+
+.js-icon::before {
+  .__icon("js"; #FEDA3E);
+}
+
+.coffee-icon::before {
+  .__icon("cs"; #28334C; @white);
+}
+
+.html5-icon::before {
+  .__icon("<h"; #D28445);
 }

@@ -147,3 +147,140 @@ atom-panel.bottom.tool-panel.panel-bottom {
   min-height: @cursor-height;
   line-height: @cursor-height;
 }
+
+section.packages {
+  padding: @cursor-height (@cursor-width * 2) !important;
+
+  .section-heading {
+    font-size: @font-size !important;
+    height: @cursor-height;
+    background-color: #777;
+    margin-bottom: @cursor-height !important;
+    text-transform: uppercase;
+  }
+
+  button {
+    display: inline-block !important;
+    line-height: @cursor-height !important;
+    top: 0 !important;
+
+    &:not(.status-indicator) {
+      margin: 0 0 0 @cursor-width !important;
+    }
+
+    &.btn.status-indicator {
+      width: @cursor-width !important;
+    }
+
+  }
+}
+
+.package-card,
+.settings-view .package-card {
+  padding: 0;
+  border-top: @cursor-height solid @base-border-color;
+  border-left: @cursor-width solid @base-border-color;
+  border-right: @cursor-width solid @base-border-color;
+  border-bottom: 0;
+  margin: 0;
+  background-color: #111;
+
+
+  &:last-of-type {
+    border-bottom: @cursor-height solid @base-border-color;
+  }
+
+  .card-name {
+    .only-horiz-padding;
+    background-color: #222;
+    margin: 0;
+    line-height: @cursor-height;
+    height: @cursor-height;
+    font-size: @font-size;
+  }
+
+  .package-version {
+    font-size: @font-size;
+  }
+
+  .package-description {
+    .only-horiz-padding;
+    display: inline-block;
+    font-size: @font-size;
+    min-height: @cursor-height;
+    line-height: @cursor-height;
+  }
+
+  .stats.pull-right,
+  .stats.pull-right .value {
+    vertical-align: top;
+    display: inline-block;
+    font-size: @font-size;
+    line-height: @cursor-height;
+    height: @cursor-height;
+  }
+
+  .stats.pull-right {
+    margin-right: @cursor-width;
+  }
+
+  .body {
+    margin-bottom: @cursor-height;
+  }
+
+  .meta {
+    line-height: @cursor-height;
+    margin: 0;
+    font-size: @font-size;
+
+    .meta-user {
+      margin: 0;
+      height: @cursor-height;
+    }
+
+    .author {
+      display: inline-block;
+    }
+
+    .meta-controls {
+      height: @cursor-height;
+      padding: 0;
+      margin: 0;
+    }
+
+    .btn-toolbar {
+      height: @cursor-height;
+
+      .btn-group {
+        margin: 0;
+      }
+    }
+
+    .avatar {
+      height: @cursor-height;
+      width: @cursor-width *2;
+    }
+  }
+}
+
+.settings-view .config-menu {
+  padding: 0;
+  padding-top: @cursor-height;
+  border-right: @cursor-width solid @base-border-color;
+
+  li {
+    height: @cursor-height;
+    margin: 0;
+    text-align: left;
+
+    .icon {
+      .only-horiz-padding;
+      height: @cursor-height;
+    }
+  }
+
+  .button-area {
+    margin: 0;
+    margin-top: @cursor-height;
+  }
+}

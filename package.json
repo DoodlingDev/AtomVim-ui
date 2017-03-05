@@ -1,7 +1,7 @@
 {
   "name": "atom-vim-ui",
   "theme": "ui",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Making Atom as close to the metal as your terminal",
   "keywords": [
     "ui",

@@ -49,6 +49,12 @@
   font-weight: bold;
 }
 
+.icon-diff::before {
+  .__icon("/"; #AAA; @black);
+  width: @cursor-width !important;
+  font-weight: bold;
+}
+
 .icon-diff-added::before {
   .__icon("+"; #6CC990);
   width: @cursor-width !important;
@@ -145,4 +151,69 @@
 
 .html5-icon::before {
   .__icon("<h"; #D28445);
+}
+
+.icon-alignment-align::before {
+  .__icon("*<"; #F0F0F0);
+}
+
+.icon-alignment-aligned-to::before {
+  .__icon("*>"; #F0F0F0);
+}
+
+.icon-alignment-unalign::before {
+  .__icon("><"; #F0F0F0);
+}
+
+.icon-arrow-down::before,
+.icon-chevron-down::before {
+  .__icon("\\/"; #333; @white);
+}
+
+.icon-arrow-left::before,
+.icon-chevron-left::before {
+  .__icon("<-"; #333; @white);
+}
+
+.icon-arrow-right::before,
+.icon-chevron-right::before {
+  .__icon("->"; #333; @white);
+}
+
+.icon-arrow-small-down::before {
+  .__icon("v"; #333; @white);
+}
+
+.icon-arrow-small-left::before {
+  .__icon("<"; #333; @white);
+}
+
+.icon-arrow-small-right::before {
+  .__icon(">"; #333; @white);
+}
+
+.icon-arrow-small-up::before {
+  .__icon("^"; #333; @white);
+}
+
+.icon-arrow-up::before,
+.icon-chevron-up::before {
+  .__icon("/\\"; #333; @white);
+}
+
+.icon-code::before,
+.icon-file-code::before {
+  .__icon("<>"; @black);
+  color: lime !important;
+}
+
+.icon-paintcan::before {
+  .__icon("#"; @base-border-color; @white);
+  width: @cursor-width !important;
+}
+
+.icon-fold::before,
+.icon-unfold::before,
+.sub-section-heading.icon-paintcan.has-items::after {
+  .__icon("^v"; @base-border-color; @white);
 }

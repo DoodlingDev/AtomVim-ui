@@ -15,7 +15,6 @@
   }
 }
 
-
 // Modal -------------------
 // Used on top of the editor, like the Command Palette.
 
@@ -148,6 +147,21 @@ atom-panel.bottom.tool-panel.panel-bottom {
   line-height: @cursor-height;
 }
 
+.section-heading,
+.sub-section-heading {
+  font-size: @font-size !important;
+  text-transform: uppercase;
+  height: @cursor-height;
+  background-color: #CCC !important;
+  color: black !important;
+  border-bottom: @cursor-height solid #666;
+  padding-bottom: @cursor-height;
+  margin-bottom: 0;
+}
+.sub-section-heading {
+  border-bottom: 0;
+}
+
 section.packages {
   padding: @cursor-height (@cursor-width * 2) !important;
 
@@ -171,7 +185,6 @@ section.packages {
     &.btn.status-indicator {
       width: @cursor-width !important;
     }
-
   }
 }
 
@@ -184,11 +197,6 @@ section.packages {
   border-bottom: 0;
   margin: 0;
   background-color: #111;
-
-
-  &:last-of-type {
-    border-bottom: @cursor-height solid @base-border-color;
-  }
 
   .card-name {
     .only-horiz-padding;
@@ -209,6 +217,20 @@ section.packages {
     font-size: @font-size;
     min-height: @cursor-height;
     line-height: @cursor-height;
+  }
+
+  button {
+    display: inline-block !important;
+    line-height: @cursor-height !important;
+    top: 0 !important;
+
+    &:not(.status-indicator) {
+      margin: 0 0 0 @cursor-width !important;
+    }
+
+    &.btn.status-indicator {
+      width: @cursor-width !important;
+    }
   }
 
   .stats.pull-right,
@@ -261,6 +283,10 @@ section.packages {
       width: @cursor-width *2;
     }
   }
+}
+
+.package-container:not(:empty) {
+  border-bottom: @cursor-height solid @base-border-color;
 }
 
 .settings-view .config-menu {
